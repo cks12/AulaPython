@@ -1,4 +1,5 @@
 import os 
+from time import sleep
 
 db = {
     "discount":.15,
@@ -21,6 +22,13 @@ def inputFloat(txt: str) -> float:
     except: 
         print("Digite um valor numerico")
         return inputFloat(txt)
+
+def nextInSeconds(time: float, next: staticmethod, text: str = '' ):
+    print(text)
+    for i in range(time):
+        print("{}.".format(i))
+        sleep(1)
+    next()
 
 def choiceAOption(arr = []) -> str or int or float or any: 
     for index, element in enumerate(arr):
@@ -48,7 +56,7 @@ def aulaPart2(qtn: float or int) -> float or int:
     print(string)
     return valueTotal - valueTotal * db["comboDiscount"] 
 
-if __name__ == "__main__":
+def start():
     clear()
     print('''
 {e}
@@ -56,8 +64,13 @@ Gerealdão desistiu de rivia e decidiu abrir uma loja de doces
 Então seja bem vindo a FUCKIN LOJA DE DONUTS DO GERALDÂO!!!!
 {e}    
 '''.format(e="."*100))
+
     qnt = inputFloat("> Digite a quantidade: ")
     formasDePagamento = choiceAOption(db['formasDePagamento'])
     valueTotal = aulaPart2(qnt) if (formasDePagamento != "Outro") and (qnt%4 == 0) else aulaPart1(qnt)
     string = "> Você precisa pagar {}".format(valueTotal)
-    print()
+    print(string)
+    nextInSeconds(3,start, "Proximo cliente em...")
+
+if __name__ == "__main__":
+    start()
