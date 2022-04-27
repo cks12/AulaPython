@@ -68,9 +68,9 @@ Então seja bem vindo a FUCKIN LOJA DE DONUTS DO GERALDÂO!!!!
     qnt = inputFloat("> Digite a quantidade: ")
     formasDePagamento = choiceAOption(db['formasDePagamento'])
     valueTotal = aulaPart2(qnt) if (formasDePagamento != "Outro") and (qnt%4 == 0) else aulaPart1(qnt)
-    string = "> Você precisa pagar {}".format(valueTotal)
+    string = "> Você precisa pagar \033[0;31;47m{}\033[0;37;40m".format(valueTotal)
     print(string)
-    nextInSeconds(3,start, "Proximo cliente em...")
+    nextInSeconds(5,start, "Proximo cliente em...")
 
 if __name__ == "__main__":
     start()
