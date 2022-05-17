@@ -6,11 +6,11 @@ class Console:
         try:
             return float(t)
         except: 
-            print("\n> Por favor digite um número\n")
+            print("> Por favor digite um número")
             return self.inputNumber(txt)
 
     def inputInArr(self, arr: list, **kwargs) -> any:
-        i = input(f"> Digite uma opção {arr}: \n> ")
+        i = input(f"\n> Digite uma opção {arr}: \n> ")
         i = i.lower()
         try:
             kwargs["err"]
@@ -31,7 +31,7 @@ class Console:
     
     def choiceExecInArray(self, arr: list) -> any:
 
-        print("> Escolha uma opção a baixo: ")
+        print("\n> Escolha uma opção a baixo: ")
         for i,e in enumerate(arr):
             string = "[{n}]. {e}".format(n = i, e = e["name"])
             print(string)
