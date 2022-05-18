@@ -1,4 +1,4 @@
-import os 
+import os, time
 
 class Console:
     def inputNumber(self,txt: str) -> float: 
@@ -40,7 +40,7 @@ class Console:
             userChoice = int(userChoice)
             return arr[userChoice]
         except:
-            return self.choiceInArray(arr)
+            return self.choiceExecInArray(arr)
     
     def Exit(self):
         exit(0)
@@ -68,22 +68,30 @@ class Calculator (Console):
         result = self.calc(x, y, op)
         print(f"> O resultado de {x} {op} {y} é {result}")
 
-def Departamento ():
-    errs = 0
-    while errs <= 2:
-        ops = ["compras","vendas"]
-        userInput = console.inputInArr(ops, err=True)
-        if userInput[1] != 0:
-            errs += userInput[1]
-            print(f"> Você tem {errs} erros")
-        
-        if userInput[0] == "compras":
-            print("> compras...")
-            break
-        
-        if userInput[0] == "vendas":
-            print("> vendas...")
-            break
+class Departamento(Console):
+    def __init__(self):
+        super().__init__()
+        self.__errs__ = 0
+        self.__saldo__ = 0
+
+    def setSaldo(self):
+        self.__errs__ = 0
+        while self.__errs__ <= 2:
+            ops = ["compras","vendas"]
+            userInput = console.inputInArr(ops, err=True)
+            if userInput[1] != 0:
+                self.__errs__ += userInput[1]
+                print(f"> Você tem {self.__errs__} erros")
+            if userInput[0] == "compras":
+                val = self.inputNumber("> Digite o valor das compras: ")
+                self.__saldo__ -= val
+                break
+            if userInput[0] == "vendas":
+                val = self.inputNumber("> Digite o valor das vendas: ")
+                self.__saldo__ += val 
+                break
+    def getSaldo(self):
+        print(f"> Saldo da loja {self.__saldo__}")
 
 def listAll():
     functions = [
@@ -93,7 +101,11 @@ def listAll():
             },
             {
                 "name":"Departamento",
-                "function":Departamento
+                "function":loja.setSaldo
+            },
+            {
+                "name":"Saldo total",
+                "function":loja.getSaldo
             },
             {
                 "name":"Listar todos os comandos",
@@ -109,8 +121,10 @@ def listAll():
 
 if __name__ == "__main__":
     global console
+    global loja
     console = Console()
+    loja = Departamento() 
     console.clear()
-    
+    print("> Iniciando o sistema",end="")
     while True:
         listAll()
