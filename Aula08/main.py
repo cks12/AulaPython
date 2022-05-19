@@ -45,6 +45,11 @@ class Console:
     def Exit(self):
         exit(0)
 
+    def printWithDelay (self, seconds: int, txt: str):
+        for i in range(seconds):
+            print(txt, end="")
+            time.sleep(1)
+
 class Calculator (Console):
     def __init__(self):
         super().__init__()
@@ -126,5 +131,16 @@ if __name__ == "__main__":
     loja = Departamento() 
     console.clear()
     print("> Iniciando o sistema",end="")
+    
+    for i in range(5):
+        time.sleep(1)
+        print(".", end="")
+
     while True:
         listAll()
+        print("> Voltando pro inicio em", end="")
+
+        for i in range(3):
+            console.printWithDelay(f"{i}", seconds=3)
+        console.clear()
+        
