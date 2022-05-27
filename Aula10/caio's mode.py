@@ -1,3 +1,6 @@
+import this
+
+
 class utils:
     def convert_string_to_donout_request(self, arr) -> dict:
         __obj__ = {
@@ -80,8 +83,6 @@ if __name__ == "__main__":
         list(filter(lambda request: request['txService'] == 's', listOfTypeDonout[2])),
     ]
 
-    print(listOfTypeTx)
-
     string = f'''
     1. Quantos clientes optaram pelo tipo classico?
         R: <{len(listOfTypeDonout[0])}>
@@ -98,7 +99,7 @@ if __name__ == "__main__":
         R: <{len(requestsList)}>
 
     5. Quantos clientes concordaram em pagar a taxa de servico?
-        R: <{requestsStr.count('sim')}>
+        R: <{sum([len(listOfTypeTx[0]), len(listOfTypeTx[1]), len(listOfTypeTx[2])])}>
 
     6. Sabendo que a taxa de servico é de 10% sob o valor da compra (preco*qt)
     e os precos unitacios constam abaixo, qual a receita deste dia?
@@ -106,4 +107,5 @@ if __name__ == "__main__":
     Recheado = R$ 11.90 R. < R$: {(11.9 * len(listOfTypeTx[1])) * 0.1:.2f} >
     Premium = R$ 13.90 R. < R$: {(13.9 * len(listOfTypeTx[2])) * 0.1:.2f} >
     '''
+
     print(string)
