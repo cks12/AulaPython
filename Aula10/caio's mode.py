@@ -40,13 +40,6 @@ class utils:
         __temp_list__ = self.list_donout_requests_and_convert_to_list(arr=__temp_string__,separatorN=3)
         return __temp_list__
 
-    def arrFilter(self, arr:list = [], counter:int = 0, element:list = ['','']) -> list:
-        __arr__ = []
-        for i in range(counter):
-            temp = list(filter(lambda request: request[element[0]] == element[1], arr[i if element[2] else 0]))
-            __arr__.append(temp)
-        return __arr__
-
 class Pedido(utils): 
     def __init__(self) -> None:
         self.salvar_pedido = ""
