@@ -141,6 +141,6 @@ if __name__ == "__main__":
         print("> Voltando pro inicio em", end="")
 
         for i in range(3):
-            console.printWithDelay(f"{i}", seconds=3)
+            console.printWithDelay(txt=f"{i}", seconds=3)
         console.clear()
         
