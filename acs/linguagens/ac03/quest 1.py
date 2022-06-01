@@ -1,6 +1,6 @@
 cp = []
 l = 0
-def userInput() -> None:
+def userInput():
     ui = input()
     ui = ui.split(" ")
     return ui
