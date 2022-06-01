@@ -1,4 +1,5 @@
 t1,t2 = input(), input()
+t1,t2 = int(t1), int(t2)
 
 def t(i):
     i = int(i)
@@ -8,5 +9,8 @@ def t(i):
         print(s)
     print('-'*10)
 
-t(t1)
-t(t2)
+if t1 > t2:
+    print("Nenhuma tabuada no intervalo!")
+
+for num in range(t1, t2+1):
+    t(num)
