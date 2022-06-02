@@ -13,9 +13,14 @@ X,Y = float(X),float(Y)
 
 for cn in cns:
     subs, cpm, prem = cn[1], cn[2], cn[3]
-    print(prem)
-    count = cpm * X if prem == "sim" else cpm * Y
-    temp = [cn[0],count]
+    subs = subs // 1000
+    count = cpm + (subs * X if prem == "sim" else subs * Y)
+    temp = f"{cn[0]}: R$ {count :.2f}"
     cnsOut.append(temp)
 
-print(cnsOut)
+listCns = '\n'.join(s for s in cnsOut)
+stirng = '''-----
+BÔNUS
+-----\n'''
+print(stirng, end="")
+print(listCns)
