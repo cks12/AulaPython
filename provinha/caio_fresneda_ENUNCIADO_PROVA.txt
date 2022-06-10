@@ -1,0 +1,128 @@
+Questão 01) Você faz parte de uma consultoria e prestará serviço para uma imobiliária. 
+
+Seu primeiro serviço será receber os dados anotados e transformá-los. 
+
+Os dados foram anotados como uma lista de listas e você deverá transformar numa lista de tuplas, sendo que cada uma delas será composta por 04 elementos. Observem que há dados numéricos e floats. Seus formatos devem estar dentro do padrão dos outputs, inclusive quanto ao total de casas decimais. 
+
+Os dados anotados correspondem a: nome do comprador, bairro do imóvel, metragem e preço de venda. Crie a seguinte função: Q1(entrada). A variável entrada refere-se a uma lista de listas que será necessária para responder a prova. Lembre-se de criar 01 variável global: var_4 que representará numa lista de tuplas, sendo que cada uma delas será composta por 04 elementos. 
+
+Note os exemplos de entrada e saída:
+
+Exemplo 1.
+Entrada: 
+[['Eduardo', 'Bela_Vista', 43.4, 745612], ['Lívia', 'Bela_Vista', 141.1, 1186086]] 
+Saída: 
+var_4:[('Eduardo', 'Bela_Vista', 43.4, 745612), ('Lívia', 'Bela_Vista', 141.1, 1186086)]
+ 
+
+Exemplo 2.
+Entrada: 
+[['João_Miguel', 'Liberdade', 77.81, 800198], ['Maria_Helena', 'Consolacao', 26.55, 466271], ['Rafaela', 'Bom_Retiro', 179.06, 2373798], ['Antonella', 'Bom_Retiro', 114.62, 960057], ['Elisa', 'Liberdade', 106.53, 1367632], ['Liz', 'Liberdade', 21.72, 308380], ['Arthur', 'Republica', 24.51, 357282]] 
+Saídas: 
+var_4:[('João_Miguel', 'Liberdade', 77.81, 800198), ('Maria_Helena', 'Consolacao', 26.55, 466271), ('Rafaela', 'Bom_Retiro', 179.06, 2373798), ('Antonella', 'Bom_Retiro', 114.62, 960057), ('Elisa', 'Liberdade', 106.53, 1367632), ('Liz', 'Liberdade', 21.72, 308380), ('Arthur', 'Republica', 24.51, 357282)]
+ 
+
+Exemplo 3.
+Entrada: 
+[['Henrique', 'Consolacao', 132.24, 1610418], ['Vitor', 'Consolacao', 47.86, 792513]] 
+Saídas: 
+var_4:[('Henrique', 'Consolacao', 132.24, 1610418), ('Vitor', 'Consolacao', 47.86, 792513)]
+ 
+
+-----
+
+Multipla Escolha 1: Qual o valor do elemento da posição 17 da var_4?  
+
+A: ('Isabella', 'Liberdade', 179.24, 1624631)
+B: ('Júlia', 'Bom_Retiro', 53.19, 792796)
+C: ('Mariana', 'Liberdade', 32.84, 580479)
+D: ('Pedro_Henrique', 'Liberdade', 62.83, 516902)
+E: ('Gael', 'Consolacao', 81.2, 1022957) 
+
+-----
+
+Multipla Escolha 2: Qual o valor do elemento de índice igual a 27 da var_4? 
+
+A: ('Rebeca', 'Bela_Vista', 191.96, 2314653)
+B: ('Benício', 'Consolacao', 145.52, 2239698)
+C: ('Joaquim', 'Bom_Retiro', 113.6, 1496680)
+D: ('Enzo', 'Se', 75.03, 691401)
+E: ('Ana_Luiza', 'Se', 152.2, 2414044)  
+ 
+ -----
+Questão 02) Crie a função Q2(var_4). Neste desafio, vamos ordenar a lista que compões os nomes na ordem alfabética. Note que as outras 03 listas deverão ser reordenadas seguindo a ordem feita para os nomes. Por exemplo, se inicialmente os nomes eram Bernanrdo e Arthur, o resultado será Arthur e Bernando. Nas outras 03 listas, os valores que são atribuídos ao Arthur deverão manter na 1a posição e os do Bernando, na segunda. 
+
+ A variável var_5 será global e seus valores serão iguais a var_4 ordenada. 
+
+Note os exemplos de entrada e saída:
+Exemplo 1.
+
+Entradas: 
+var_4:[('Eduardo', 'Bela_Vista', 43.4, 745612), ('Lívia', 'Bela_Vista', 141.1, 1186086)]
+Saídas: 
+var_5:[('Eduardo', 'Bela_Vista', 43.4, 745612), ('Lívia', 'Bela_Vista', 141.1, 1186086)] 
+
+Exemplo 2.
+Entradas: 
+var_4:[('João_Miguel', 'Liberdade', 77.81, 800198), ('Maria_Helena', 'Consolacao', 26.55, 466271), ('Rafaela', 'Bom_Retiro', 179.06, 2373798), ('Antonella', 'Bom_Retiro', 114.62, 960057), ('Elisa', 'Liberdade', 106.53, 1367632), ('Liz', 'Liberdade', 21.72, 308380), ('Arthur', 'Republica', 24.51, 357282)]
+Saídas: 
+var_5:[('Antonella', 'Bom_Retiro', 114.62, 960057), ('Arthur', 'Republica', 24.51, 357282), ('Elisa', 'Liberdade', 106.53, 1367632), ('João_Miguel', 'Liberdade', 77.81, 800198), ('Liz', 'Liberdade', 21.72, 308380), ('Maria_Helena', 'Consolacao', 26.55, 466271), ('Rafaela', 'Bom_Retiro', 179.06, 2373798)] 
+
+Exemplo 3.
+Entradas: 
+var_4:[('Henrique', 'Consolacao', 132.24, 1610418), ('Vitor', 'Consolacao', 47.86, 792513)]
+Saídas: 
+var_5:[('Henrique', 'Consolacao', 132.24, 1610418), ('Vitor', 'Consolacao', 47.86, 792513)] 
+
+-----
+
+Multipla Escolha 3: Considere var_5. Qual é o primeiro nome que aparece? 
+
+A: ('Arthur', 'Consolacao', 146.35, 2194079)
+B: ('Beatriz', 'Bom_Retiro', 175.64, 2298776)
+C: ('Ana_Luiza', 'Se', 152.2, 2414044)
+D: ('Alícia', 'Bela_Vista', 24.19, 194656)
+E: ('Agatha', 'Liberdade', 167.91, 1365276) 
+
+-----
+
+Multipla Escolha 4: Considere var_5. Qual é o último nome que aparece? 
+
+A: ('Rebeca', 'Bela_Vista', 191.96, 2314653)
+B: ('Rafael', 'Consolacao', 64.51, 809794)
+C: ('Pedro_Henrique', 'Liberdade', 62.83, 516902)
+D: ('Sarah', 'Bela_Vista', 52.05, 685706)
+E: ('Noah', 'Republica', 83.26, 1254145) 
+
+-----
+Questão 03) Crie a função Q3(var_4). Considere que o valor do metro quadrado = preço / metragem. Se o valor do metro quadrado <= 10K, "compra no ato", se o valor do metro quadrado > 14k, "não compra", caso contrário "avalia". Note que o resultado deverá ser salvo na variável global var_9. Observe que o seu resultado deverá ser igual a saída dos exemplos. 
+
+Note os exemplos de entrada e saída:
+
+Exemplo 1.
+Entradas: 
+var_4:[('Eduardo', 'Bela_Vista', 43.4, 745612), ('Lívia', 'Bela_Vista', 141.1, 1186086)]
+Saídas: 
+var_9:['não comprar', 'comprar no ato'] 
+
+Exemplo 2.
+Entradas: 
+var_4:[('João_Miguel', 'Liberdade', 77.81, 800198), ('Maria_Helena', 'Consolacao', 26.55, 466271), ('Rafaela', 'Bom_Retiro', 179.06, 2373798), ('Antonella', 'Bom_Retiro', 114.62, 960057), ('Elisa', 'Liberdade', 106.53, 1367632), ('Liz', 'Liberdade', 21.72, 308380), ('Arthur', 'Republica', 24.51, 357282)]
+Saídas: 
+var_9:['avaliar', 'não comprar', 'avaliar', 'comprar no ato', 'avaliar', 'não comprar', 'não comprar'] 
+
+Exemplo 3.
+Entradas: 
+var_4:[('Henrique', 'Consolacao', 132.24, 1610418), ('Vitor', 'Consolacao', 47.86, 792513)]
+Saídas: 
+var_9:['avaliar', 'não comprar'] 
+
+-----
+
+Multipla Escolha 5: Considere var_9. Quantas vezes o termo avaliar aparece? 
+
+A: 16
+B: 26
+C: 18
+D: 17
+E: 20

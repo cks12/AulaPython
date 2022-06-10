@@ -1,0 +1,156 @@
+Questão 01) Você faz parte de uma consultoria e prestará serviço para uma pediatra. 
+
+Seu primeiro serviço será receber os dados anotados e transformá-los. 
+
+Os dados foram anotados como uma sequência de string e você deverá transformar cada tipo de elemento numa lista isolada, totalizando 04 listas. Observem que há dados numéricos e floats. Seus formatos devem estar dentro do padrão dos outputs, inclusive quanto ao total de casas decimais. 
+
+Os dados anotados correspondem a: nome do paciente, sintoma, altura (cm) e peso (kg). Crie a seguinte função: Q1(entrada). A variável entrada refere-se a uma sequência de string que será necessária para responder a prova. Lembre-se de criar 04 variáveis globais: var_1,var_2,var_3,var_4 que representarão cada tipo de elemento numa lista isolada, totalizando 04 listas, respeitando a ordem que aparecem na entrada original. 
+
+Note os exemplos de entrada e saída:
+
+Exemplo 1.
+Entrada: 
+Vicente Febre 0.7 12 Anthony Dor_Cabeca 0.66 45 Marina Nauseas 1.54 26 Yasmin Dor_Cabeca 1.11 48  
+Saídas (note que são 04): 
+var_1:['Vicente', 'Anthony', 'Marina', 'Yasmin']
+var_2:['Febre', 'Dor_Cabeca', 'Nauseas', 'Dor_Cabeca']
+var_3:[0.7, 0.66, 1.54, 1.11]
+var_4:[12, 45, 26, 48]
+ 
+
+Exemplo 2.
+Entrada: 
+Emanuel Tosse 1.31 43 Nicolas Dor_Cabeca 1.07 55 Bento Colica 0.86 34  
+Saídas (note que são 04): 
+var_1:['Emanuel', 'Nicolas', 'Bento']
+var_2:['Tosse', 'Dor_Cabeca', 'Colica']
+var_3:[1.31, 1.07, 0.86]
+var_4:[43, 55, 34]
+ 
+
+Exemplo 3.
+Entrada: 
+Luiza Dor_Cabeca 1.35 26 Isis Tosse 0.96 64 Mariana Dor_Cabeca 0.79 46  
+Saídas (note que são 04): 
+var_1:['Luiza', 'Isis', 'Mariana']
+var_2:['Dor_Cabeca', 'Tosse', 'Dor_Cabeca']
+var_3:[1.35, 0.96, 0.79]
+var_4:[26, 64, 46]
+ 
+
+-----
+
+Multipla Escolha 1: Qual o valor do elemento da posição 27 da var_4?  
+
+A: 20
+B: 75
+C: 70
+D: 45
+E: 55 
+
+-----
+
+Multipla Escolha 2: Qual o valor do elemento de índice igual a 37 da var_4? 
+
+A: 51
+B: 80
+C: 70
+D: 32
+E: 56  
+ 
+ -----
+Questão 02) Crie a função Q2(var_1,var_2,var_3,var_4). Neste desafio, agregar valores. Você deverá criar as variáveis globais var3_max e var4_min. Lembrete: len = tamanho da sequência, sum = soma dos elementos da sequência, min = menor valor da sequência e max = maior valor da sequência. 
+
+Note os exemplos de entrada e saída:
+
+Exemplo 1.
+Entradas: 
+var_1:['Vicente', 'Anthony', 'Marina', 'Yasmin']
+var_2:['Febre', 'Dor_Cabeca', 'Nauseas', 'Dor_Cabeca']
+var_3:[0.7, 0.66, 1.54, 1.11]
+var_4:[12, 45, 26, 48]
+Saídas: 
+var3_max:1.54
+var4_min:12 
+
+Exemplo 2.
+Entradas: 
+var_1:['Emanuel', 'Nicolas', 'Bento']
+var_2:['Tosse', 'Dor_Cabeca', 'Colica']
+var_3:[1.31, 1.07, 0.86]
+var_4:[43, 55, 34]
+Saídas: 
+var3_max:1.31
+var4_min:34 
+
+Exemplo 3.
+Entradas: 
+var_1:['Luiza', 'Isis', 'Mariana']
+var_2:['Dor_Cabeca', 'Tosse', 'Dor_Cabeca']
+var_3:[1.35, 0.96, 0.79]
+var_4:[26, 64, 46]
+Saídas: 
+var3_max:1.35
+var4_min:26 
+
+-----
+
+Multipla Escolha 3: Considere var3_max. Qual o seu resultado? 
+
+A: 3226
+B: 1.59
+C: 0.52
+D: 68.95999999999998
+E: 13 
+
+-----
+
+Multipla Escolha 4: Considere var4_min. Qual o seu resultado? 
+
+A: 68.95999999999998
+B: 13
+C: 0.52
+D: 3226
+E: 80 
+
+-----
+Questão 03) Crie a função Q3(var_1,var_2,var_3,var_4). Considere que o IMC = peso / (altura**2). Se IMC < 18.5 , "magro", se IMC > 25, "sobrepeso", caso contrário, "normal". Note que o resultado deverá ser salvo na variável global var_9. Observe que o seu resultado deverá ser igual a saída dos exemplos. 
+
+Note os exemplos de entrada e saída:
+
+Exemplo 1.
+Entradas: 
+var_1:['Vicente', 'Anthony', 'Marina', 'Yasmin']
+var_2:['Febre', 'Dor_Cabeca', 'Nauseas', 'Dor_Cabeca']
+var_3:[0.7, 0.66, 1.54, 1.11]
+var_4:[12, 45, 26, 48]
+Saídas: 
+var_2:['normal', 'sobrepeso', 'magro', 'sobrepeso'] 
+
+Exemplo 2.
+Entradas:
+var_1:['Emanuel', 'Nicolas', 'Bento']
+var_2:['Tosse', 'Dor_Cabeca', 'Colica']
+var_3:[1.31, 1.07, 0.86]
+var_4:[43, 55, 34]
+Saídas: 
+var_2:['sobrepeso', 'sobrepeso', 'sobrepeso'] 
+
+Exemplo 2.
+Entradas:
+var_1:['Luiza', 'Isis', 'Mariana']
+var_2:['Dor_Cabeca', 'Tosse', 'Dor_Cabeca']
+var_3:[1.35, 0.96, 0.79]
+var_4:[26, 64, 46]
+Saídas: 
+var_2:['magro', 'sobrepeso', 'sobrepeso'] 
+
+-----
+
+Multipla Escolha 5: Considere var_9. Quantas vezes o termo sobrepeso aparece? 
+
+A: 52
+B: 49
+C: 50
+D: 58
+E: 48
