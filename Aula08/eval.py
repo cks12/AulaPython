@@ -1,2 +1,0 @@
-def Eval(txt: str):
-    
