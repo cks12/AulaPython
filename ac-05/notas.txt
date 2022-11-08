@@ -1,0 +1,10 @@
+2101254;Benício Pires;3;7;6;8;0;5;6;4
+2101624;Bruna Gonçalves;4;6;8;3;0;4;0;0
+2101533;Danilo Jesus;8;7;7.25;7;0;3.75;5;0
+2101969;Ana Carolina Silva;4;6;7;6;0;8.5;0;8
+2101779;Lavínia Duarte;10;5;7;8;0;7;0;8
+2102641;Paulo da Conceição;5;9.25;9;0;7;6.5;0;28
+2101346;Marcos Vinicius Sales;5;7;9;8;0;9;0;0
+2102630;Maria Vitória Jesus;9.5;0;0;7;0;1;0;0
+2102562;Sarah Rodrigues;6;6;6;1;0;1;9;8
+2101199;Vitor Hugo Farias;5;5;8;1;0;6;9.25;;12
