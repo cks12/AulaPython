@@ -20,9 +20,9 @@ class School:
         people = []
         for element in peoples:
             temp = self.__people(element) if element else {}
-            people.append(temp)
-        return people
+            people.append(temp) if temp else {}
             
+        return sorted(people, key=lambda d:d["name"]) 
     def __people(self, string: str) -> dict:
         arr = string.split(";")
         people = {
@@ -34,30 +34,47 @@ class School:
         }
         return people
     
-    def makeAprrovedStudentFile(self, loc):
-        file = open(loc,'w')
-        aprrovedList = self.__mapStudents()
-        file.write(aprrovedList)
+    def makeFile(self, aprovedFilePath: str, reprovedFilePath: str):
         try:
-            pass
+            __mapStudents = self.__mapStudents()
+            aprovedFile = open(aprovedFilePath, "w")
+            reprovedFile = open(reprovedFilePath, "w")
+            aprovedFile.write(__mapStudents[1]) 
+            reprovedFile.write(__mapStudents[0]) 
+            
         except Exception as e:
             return print(e)
         
     def __mapStudents(self):
-        for elemnet in self.peopleList:
-            _student = self.__Student(elemnet) if elemnet else {}
-        return '_aprovedList'
+        reprovedBuffer = ""
+        aprovedBuffer = ""
+        for element in self.peopleList:
+            _student = self.__Student(element) if element else {}
+            
+            if _student[1] == "approved":
+                aprovedBuffer += f'''{str(_student[0])}\n'''
+            
+            if _student[1] == "disapproved":
+                reprovedBuffer += f'''{str(_student[0])}\n'''
+                
+        return reprovedBuffer, aprovedBuffer
     
     def __Student(self, element):
         if(int(element["absence"]) > 20):
-            return element["ra"], "disapproved"
+            return element["name"], "disapproved"
+        
         acs = element["grade"]
-        acs.sort(reverse=True)
+        test = element["tests"]
+        acs.sort( reverse=True )
+        test.sort(reverse=True)
+        test = test[0]
         acsMd = sum(acs[0:4]) / 4
-        print(acsMd)
-        return element ["ra"], "approved"
+        md = (acsMd + test) / 2
+        if(md < 6):
+            return element["name"], "disapproved"
+        return element ["name"], "approved"
 
 if __name__ == "__main__":
     school = School()
     school.readGradeInFile("notas.txt")
-    school.makeAprrovedStudentFile("aprovados.txt")
+    school.makeFile("aprovados.txt","reprovados.txt")
