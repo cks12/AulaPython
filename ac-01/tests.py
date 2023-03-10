@@ -31,11 +31,14 @@ class TestSomatorio(unittest.TestCase):
         self.assertEqual(soma_digitos(45), 9)
         self.assertEqual(soma_digitos(451), 10)
         self.assertEqual(soma_digitos(2345), 14)
+        self.assertEqual(soma_digitos(9), 9)
     
     def test_soma_lista(self):
         self.assertEqual(soma_lista([1,2,3,4],0), 10)
         self.assertEqual(soma_lista([1,2,3,4],2), 7)
+        self.assertEqual(soma_lista([1,2,3,4],2), 7)
         self.assertEqual(soma_lista([22,33,44,55],1), 132)
+        self.assertEqual(soma_lista( [11, 22, 33, 44, 55, 66],5), 66)
 
 
 if __name__ == '__main__':

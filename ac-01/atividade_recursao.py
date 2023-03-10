@@ -21,10 +21,7 @@ def somatorio(n:int) -> int:
 	"""
 
 	if n <= 0:
-		return n
-
-	if n == 0:
-		return n
+		return 0
 
 	else:
 		return n + somatorio(n-1)
@@ -56,8 +53,11 @@ def potencia_de_2(n:int) -> bool:
 
 	if n == 1:
 		return True
+
 	elif n % 2 == 1:
+		
 		return False
+
 	else:
 		return potencia_de_2(n//2)
 
@@ -81,10 +81,10 @@ def qtd_digitos(n:int) -> int:
 	int: número de digitos de n.
 	"""
 
-	if n < 10:
-		return 1
-	else: 
+	if n >= 1:
 		return 1 + qtd_digitos(n//10)
+	else: 
+		return 0
 
 
 def soma_digitos(n: int) -> int:
@@ -105,10 +105,10 @@ def soma_digitos(n: int) -> int:
 	int: soma dos dígitos de n.
 	"""
 
-	if n < 10:
-		return n
-	else:
+	if n >= 1:
 		return n % 10 + soma_digitos(n // 10)
+	else:
+		return 0
 
 
 def soma_lista(lista:list, i:int) -> int: 
@@ -134,7 +134,10 @@ def soma_lista(lista:list, i:int) -> int:
 	int: soma dos valores da lista.	
 	"""
 
+	if (i - 1) == len(lista) -1 :
+		return 0
+
 	if i == len(lista) - 1:
-		return lista[i]
+		return lista[i] + soma_lista(lista,i + 1)
 	else:
 		return lista[i] + soma_lista(lista, i + 1)
